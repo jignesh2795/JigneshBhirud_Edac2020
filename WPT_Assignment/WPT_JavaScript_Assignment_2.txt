@@ -20,7 +20,7 @@ reversed string.
 
 function reverse(){
 
-var str = "My Name is Viraj";
+var str = "My Name is Jignesh";
 var rev_str="";
 for(var i = str.length-1;i>=0;i--)
 {
@@ -32,7 +32,7 @@ return rev_str;
 
 reverse();
 
-"jariV si emaN yM"
+"hesngiJ si emaN yM"
 
 3.Given a javascript array of objects having a radius property as shown [{radius: 5}, {radius: 9},
 {radius: 2}] , write a comparator function to sort it.
