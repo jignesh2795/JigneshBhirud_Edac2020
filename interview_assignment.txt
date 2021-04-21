@@ -1,0 +1,336 @@
+Que. What are the key features of java?
+ans-Difference 
+C++: 
+-> It is plaftorm dependent
+-> Supports multiple inheritance
+-> supports pointers
+-> uses compiler
+-> used for system programming
+
+Java : 
+-> It is platform independent
+-> doesn't support multiple ineritance
+-> does not ave a concept of pointer
+-> uses compiler and interpreter both
+-> used for application programming
+----------------------------------------------------------------------------
+Que. What are the key features of java?
+-> Object Oriented
+-> Robust
+-> Secured
+-> Highly Scalable
+-> Platform Independent
+-> Multi Threaded
+-> Architectural-Netural
+-> Interpreted
+
+
+----------------------------------------------------------------------------
+Que. What is JVM?
+1. JVM is a java virtual machine.
+2. JVM provide run time environment in which java bytecode execute.
+3. JVM is platform dependent. it is different for different operating system.
+4. JVM convert bytecode into the executable instructions.
+
+----------------------------------------------------------------------------
+Que. what is oops?why it called as object oriented?
+-> oops is a object oriented language and it is based on objects.
+   The main aim of the oops is to implement the real world entities for ex. object,classes,inheritance,polymorphism,abstraction ,encapsulation,etc
+
+----------------------------------------------------------------------------
+Que. what is Multiple inheritance?Explain with real time and in a programmic way?
+-> There occurs a problem in multiple inheritance in java as the base class has a method which is when derived or overriden 
+   in the child class with same name and same signature in both parent classes  and child class. On calling the method, 
+   the compiler cannot determine which class method is to becalled so Java doesnt support multiple inheritance directly
+
+example:
+
+Programatic example:
+
+class A{
+void data()
+{
+	System.out.println("Hi data");
+}
+}
+class B{
+void data()
+{
+	System.out.println("Hello data");
+}
+}
+
+class C extends A,B{
+public static void main (String[] args)
+{
+	C obj = new C();
+	obj.data();
+}
+}
+
+
+----------------------------------------------------------------------------
+Que. Difference between abstract class and interface?
+Abstract Class: 
+-> can have abstract and non abstract methods
+-> does not support mutliple inheritance 
+-> Variables can be static, non-static, and final not final in an abstract class.
+-> Abstract class can extend other class and also implement interface
+-> Uses extends keyword for extending 
+-> members can be private and protected
+-> Can extend one class at a time
+
+
+Interface:
+-> can have only abstract methods
+-> supports multiple inheritance
+-> Variables are static and final in an Interface
+-> Interface extend other Interface only 
+-> Uses implements keyword for implementation1.
+-> members are public by default
+-> can extend one or more interface at a time 
+
+
+----------------------------------------------------------------------------
+Que. What is Encapsulation? Explain with real time example?
+-> It is the process of binding and wrapping of data members and member functions together into an entity. The variables of a class will be hidden from
+other classes and will be accessed by methods 	of the current class in which it resides.
+
+Example of Encapsulation is:
+Washing machine is an example which has power button  and performs the task of washing the clothes we dont know the inner implementation of how power button works
+but our work is done 
+
+----------------------------------------------------------------------------
+Que.what is Polymorphism? and inheritance?
+1. Polymorphism is a object oriented concept in which poly means many and morph means form So polymorphism is the onne thing having many forms.
+2. There are two types of polymorphism Static Binding And Dynamic Binding .
+3. Static Binding means Compile Time Polymorphism which has function overloading , constructor overloading etc
+4. Dynamic Binding means Runtime Polymorphism which has function overrding
+
+1. Inheritance is the mechanism in which one class can exhibit or inherit the properties of another class.
+. Parent Child Relationship is maintained in inheritance
+
+There are 4 types of inheritance:
+1. Single
+2. Multilevel
+3. Hierarchical
+4. Multiple
+
+Inheritance helps in code reusability and also code written in base class need not to be written again in derived class we can directly call
+base class code.
+
+----------------------------------------------------------------------------
+Que. What is Method Overriding and Method Overloading ?explain with program?
+->
+1. Method Overriding is the definition of method with same name and same signature which is there in the base class same to be implemented in the derived class.
+2. Method overriding is used for runtime polymorphism. 
+3. Method Overriding works in two classes i.e base class and derived class
+4. Method Overloading is the same method with same name but different parameters i.e same method can be called with different number of arguments.
+5. Method Overloading uses compile time polymorphism.
+6. Method Overloading works in the same class.
+
+Example-
+
+class A{
+void demo()
+{
+	System.out.print("Hello Demo");
+}
+}
+class B extends A{
+void demo()
+{
+	System.out.print("Hi Demo");
+}
+
+public static void main(String [] args)
+{
+	B b = new B();
+	b.demo();
+}
+}
+
+
+
+class A{
+	void demo()
+	{
+		System.out.print("Hello Demo");
+	}
+	void demo(String name)
+	{
+		System.out.println("Hello"+ name);
+	}
+
+	public static void main(String [] args)
+	{
+		A a = new A();
+		a.demo();
+		a.demo(geeks);
+	}
+}
+
+
+----------------------------------------------------------------------------
+Que. what is collection?what's its need? if we are having array?
+
+Collection acheives operations like searching, sorting, insertion, deletion and manipulation.
+It is a single unit of objects. 
+
+The different Interfaces provided by Collection Framework are
+List, Set ,Queue,Deque and Classes are ArrayList, LinkedList, Vector, HashSet, LinkedHashSet, TreeSet, Priority Queue etc.
+
+Collecton reduces programming effort by providing useful data structures for easy manipulation access and storage of elements.
+
+Array is a fixed size homogenous set of elements. Its size once fixed cannot be changed. 
+Also it is used only when our frequent operation to be performed is searching or accessing an element due to its random access nature
+If any insertion or deletion is to be performed on array it becomes a difficult and time complex task. So to overcome that collections come in picture
+
+----------------------------------------------------------------------------
+Que.Difference between Array and ArrayList?
+
+ArrayList-
+1. Class of Collection framework
+2. dyanmic in size
+3. variable length data are stored 
+4. we can store only object type data  
+4. single dimensional
+5. iterator is used to iterate over an arrayList
+
+Array-
+1. dynamically created object
+2. static in size
+3. fixed length data are stored
+4. we can store primitive as well as object data types data 
+5. multi dimensional
+6. for loop and for each loop is used to iterate over an array
+
+Example-
+
+import java.util.Scanner;
+class ArrayDemo
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array:");
+		int n = sc.nextInt();
+		int arr[] = new int[n];
+		
+		 for(int i=0;i<arr.length();i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		
+		System.out.println("Array Elements:")
+
+		for(int j=0;j<arr.length();j++)
+		{
+			System.out.print(arr[j]);
+		}
+	}
+}
+
+
+
+import java.util.ArrayList;
+
+
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("snehal");
+		list.add("sneha");
+		list.add("Ankita");
+		list.add("lia");
+		list.add("neha");
+		list.add("priya");
+		list.add("pratiksha");
+		
+		System.out.println("ArrayList Elements are:");
+		for(String s: list)
+		{
+			System.out.println(s);
+		}
+		
+
+	}
+
+}
+
+
+----------------------------------------------------------------------------
+Que. public static void main():
+
+public: It is an access specifier which indicates that the method is public and is accessed in every class or method.
+
+static: Static means we can directly class this method with class name no instance is required to be created for it
+
+void: It indicates the return type of the method which is null i.e. nothing.
+
+main: It is the name of the method which the JVM will search when the program is compiled for execution
+
+
+
+----------------------------------------------------------------------------
+Que.Explain Exception handling and how it is handled?
+
+solution-
+
+Exception is an unwanted event that occurs in a program which stops a program's execution.
+Exception handling is the mechanism to handle the exception occured due to unwanted action and 
+execute the program efficiently.
+
+Exception can  be handled using five keywords-
+
+1. try: Enclosed in the block where exception will occurr
+2. catch: The exception is caught in this block
+3. finally: It will execute whether or not execption occurs
+4. throw: Explicitly throw an exception
+5. throws: Used in method where it is sure that exception will occur
+
+----------------------------------------------------------------------------
+Que. What is garbage collection?
+
+Garbage Collection is the method in JAVA whenever any object which is no longer being used in a program it is destroyed
+and memory is freed by JVM So JVM gives better memory management It makes JAVA memory efficient as it removes 
+the unwanted memory and also the unreferenced objects from the heap.
+
+----------------------------------------------------------------------------
+Que.Write a program to reverse a String contents.
+
+solution-
+package opps;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class ReverseSrtringRecurstion {
+	
+	static public void reverse(String str) {
+
+		Stack<Character> s=new Stack();
+		
+		for (int i = 0; i < str.length(); i++) {
+			s.push(str.charAt(i));
+			
+		}
+		
+		for (int i = 0; i < str.length(); i++) {
+			System.out.print(s.pop());
+			
+		}
+		
+		
+
+	}
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String str=sc.nextLine();
+	
+	reverse(str);
+}
+}
+
+----------------------------------------------------------------------------
